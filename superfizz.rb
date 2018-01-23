@@ -1,22 +1,26 @@
 
 number = 0
 
+
 while number <= 1000
+  modulo3 = number % 3 == 0
+  modulo5 = number % 5 == 0
+  modulo7 = number % 7 == 0
   if number == 0
     puts number
-  elsif number % 3 == 0 && number % 5 == 0 && number % 7 == 0
+  elsif modulo3 && modulo5 && modulo7
     puts "SuperFizzBuzz"
-  elsif number % 3 == 0 && number % 7 == 0
+  elsif modulo3 && modulo7
     puts "SuperFizz"
-  elsif number % 5 == 0 && number % 7 == 0
+  elsif modulo5 && modulo7
     puts "SuperBuzz"
-  elsif number % 3 == 0 && number % 5 == 0
+  elsif modulo3 && modulo5
     puts "FizzBuzz"
-  elsif number % 3 == 0
+  elsif modulo3
     puts "Fizz"
-  elsif number % 5 == 0
+  elsif modulo5
     puts "Buzz"
-  elsif number % 7 == 0
+  elsif modulo7
     puts "Super"
   else
     puts number
